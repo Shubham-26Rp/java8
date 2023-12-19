@@ -1,0 +1,17 @@
+Q.Write a java program that uses a stream API to filter and collect list of numbers.
+the program should specifically filter and collect numbers greater that 20 from a given list
+
+import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class Test {
+	public static void main(String[] args) {
+		List<Integer> numbers = Arrays.asList(10, 25, 5, 30, 15, 40);
+		List<Integer> filterNumbers = numbers.stream().filter(number -> number > 20).collect(Collectors.toList());
+		System.out.print("filtered Numbers " + filterNumbers);
+	}
+}
+
+
+ans: filtered Numbers [25, 30, 40]
